@@ -1,4 +1,4 @@
-// components/FlipCard.js
+"use client";
 import { useEffect, useRef, useState } from "react";
 import "./FlipCard.css";
 

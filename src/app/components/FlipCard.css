@@ -45,7 +45,7 @@
 @keyframes flip-top {
 
   100% {
-    transform: rotateX(90deg);
+    transform: rotateX(90deg) scaleX(1.1);
   }
 }
 
@@ -80,7 +80,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   z-index: 1;
 
 }

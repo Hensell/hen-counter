@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import FlipCard from "./flip-card";
 
@@ -46,9 +47,8 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <div className="container">
-        {/* Invertir el array antes de renderizar */}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 space-y-4">
+      <div className="flex space-x-1">
         {counter
           .slice()
           .reverse()
@@ -56,8 +56,20 @@ export default function Home() {
             <FlipCard key={index} number={digit} />
           ))}
       </div>
-      <button onClick={increment}>Incrementar</button>
-      <button onClick={decrement}>Decrementar</button>
+      <div className="flex space-x-4">
+        <button
+          onClick={increment}
+          className="w-12 h-12 bg-blue-500 text-white font-bold rounded-full shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition ease-in-out duration-300 flex items-center justify-center"
+        >
+          +
+        </button>
+        <button
+          onClick={decrement}
+          className="w-12 h-12 bg-red-500 text-white font-bold rounded-full shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 transition ease-in-out duration-300 flex items-center justify-center"
+        >
+          −
+        </button>
+      </div>
     </div>
   );
 }
